@@ -3,7 +3,7 @@
 ## Dependencies:
 - pylon-ros-camera
 
-## The most important parameters:
+## Configuration parameters:
 - camera_frame: pylon_camera -- The tf frame under which the images were published
 
 - device_user_id: "" -- If empty, the first camera found in the device list will be used
@@ -43,7 +43,7 @@ set_trigger_selector value : 0 = Frame start
 set_trigger_source value : 0 = Software
 execute_software_trigger -
 
-###full list of services is available [here](https://github.com/basler/pylon-ros-camera)
+### full list of services is available [here](https://github.com/basler/pylon-ros-camera)
 
 ## launch files:
 - basler_test0.launch  ->  for testing acA1920-40uc parameters
