@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!--  roslaunch mrbasler basler_test0.launch -->
+<launch>
+	<include file="$(find pylon_camera)/launch/pylon_camera_node.launch">
+        <arg name="config_file" default="$(find mrbasler)/config/test0.yaml" />
+	</include>
+</launch>

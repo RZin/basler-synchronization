@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--  roslaunch mrbasler basler_synch.launch -->
+<launch>
+	<include file="$(find pylon_camera)/launch/pylon_camera_node.launch">
+        <arg name="node_name" default="pylon_camera_node0" />
+        <arg name="enable_status_publisher" default="false" />
+        <arg name="enable_current_params_publisher" default="false" />
+        <arg name="config_file" default="$(find mrbasler)/config/cam0lens0.yaml" />
+	</include>
+
+    <include file="$(find pylon_camera)/launch/pylon_camera_node.launch">
+        <arg name="node_name" default="pylon_camera_node1" />
+        <arg name="enable_status_publisher" default="false" />
+        <arg name="enable_current_params_publisher" default="false" />
+        <arg name="config_file" default="$(find mrbasler)/config/cam1lens1.yaml" />
+	</include>
+</launch>

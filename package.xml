@@ -1,0 +1,23 @@
+<package>
+  <name>mrbasler</name>
+
+  <version>0.0.1</version>
+
+  <description>
+  	Proprietary Package for Basler Cameras using the the Pylon API.
+  	- Supports DART, USB3 and GigE cameras.
+  	- Setting Gain, Gamma, Exposure, Binning and Brightness using Services.
+  </description>
+
+  <author>Roman Zinovyev</author>
+
+  <maintainer email="r.zinovyev@skoltech.ru">Roman Zinovyev</maintainer>
+
+  <license>BSD</license>
+
+  <url>https://github.com/mrob/mrbasler</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>pylon_camera</run_depend>
+
+</package>

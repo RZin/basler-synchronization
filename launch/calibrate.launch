@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--  roslaunch mrbasler calibrate.launch -->
+<launch>
+	<include file="$(find pylon_camera)/launch/pylon_camera_node.launch">
+        <arg name="respawn" default="false" />
+        <arg name="debug" default="false" />
+        <arg name="node_name" default="pylon_camera_node" />
+        <arg name="mtu_size" default="1500" />
+        <arg name="startup_user_set" default="CurrentSetting" />
+        <arg name="enable_status_publisher" default="true" />
+        <arg name="enable_current_params_publisher" default="true" />
+        <arg name="config_file" default="$(find mrbasler)/config/cam0.yaml" />
+	</include>
+
+    <node name="$(arg node_name)" pkg="camera_calibration" type="cameracalibrator.py" output="screen">
+        <rosparam command="load" file="$(arg config_file)" />
+        <param name="startup_user_set" value="$(arg startup_user_set)"/>
+        <param name="enable_status_publisher" value="$(arg enable_status_publisher)"/>
+        <param name="enable_current_params_publisher" value="$(arg enable_current_params_publisher)"/>
+    </node>
+</launch>

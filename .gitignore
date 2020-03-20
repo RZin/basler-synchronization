@@ -1,0 +1,20 @@
+#############
+## folders ##
+#############
+build
+cmake-*
+
+#############
+##  files  ##
+#############
+*.*~
+*.*user.*
+*.user
+*.autosave
+CATKIN_IGNORE
+*.orig
+*~
+*.idea
+*.pyc
+*.save
+*.zip
