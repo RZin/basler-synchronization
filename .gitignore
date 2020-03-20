@@ -1,6 +1,7 @@
 #############
 ## folders ##
 #############
+tests
 build
 cmake-*
 
